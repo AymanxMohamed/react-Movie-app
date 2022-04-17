@@ -12,7 +12,7 @@ export default function MoviesContainer() {
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {
-    axiosInstance.get(`/movie/popular?page=${ pageNo }`)
+    axiosInstance.get(`/popular?page=${ pageNo }`)
     .then((res) => {
       setMovies(res.data.results)
     })
